@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ambre.controller.TaskFormController"
+      spacing="16" minWidth="480"
+      style="-fx-background-color: #F5EDD3;">
+
+    <padding><Insets top="32" right="40" bottom="32" left="40"/></padding>
+
+    <Label fx:id="formTitleLabel" styleClass="label-title"/>
+
+    <VBox spacing="6">
+        <Label fx:id="titleLabel"/>
+        <TextField fx:id="titleField"/>
+        <Label fx:id="titleError" styleClass="label-error" managed="false" visible="false"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label fx:id="descLabel"/>
+        <TextArea fx:id="descField" prefRowCount="3" wrapText="true"/>
+    </VBox>
+
+    <VBox spacing="6">
+        <Label fx:id="dueDateLabel"/>
+        <DatePicker fx:id="dueDatePicker"/>
+        <Label fx:id="dateError" styleClass="label-error" managed="false" visible="false"/>
+    </VBox>
+
+    <HBox spacing="24">
+        <VBox spacing="6" HBox.hgrow="ALWAYS">
+            <Label fx:id="priorityLabel"/>
+            <ChoiceBox fx:id="priorityChoice" maxWidth="Infinity"/>
+        </VBox>
+        <VBox spacing="6" HBox.hgrow="ALWAYS">
+            <HBox spacing="8">
+                <Label fx:id="progressLabel"/>
+                <Label fx:id="progressValueLabel" styleClass="label-muted"/>
+            </HBox>
+            <Slider fx:id="progressSlider" min="0" max="100" blockIncrement="5"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="12" alignment="CENTER_RIGHT">
+        <padding><Insets top="8"/></padding>
+        <Button fx:id="cancelBtn" styleClass="btn-secondary" onAction="#onCancel"/>
+        <Button fx:id="saveBtn" styleClass="btn-primary" onAction="#onSave"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ambre.controller.RegisterController"
+      alignment="CENTER" spacing="0"
+      minWidth="440" minHeight="580"
+      style="-fx-background-color: #F5EDD3;">
+
+    <padding><Insets top="50" right="60" bottom="50" left="60"/></padding>
+
+    <Label fx:id="titleLabel" styleClass="label-title"/>
+
+    <VBox spacing="16">
+        <padding><Insets top="32"/></padding>
+
+        <VBox spacing="6">
+            <Label fx:id="usernameLabel"/>
+            <TextField fx:id="usernameField"/>
+            <Label fx:id="usernameError" styleClass="label-error"
+                   managed="false" visible="false"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label fx:id="passwordLabel"/>
+            <PasswordField fx:id="passwordField"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label fx:id="confirmLabel"/>
+            <PasswordField fx:id="confirmField"/>
+            <Label fx:id="passwordError" styleClass="label-error"
+                   managed="false" visible="false"/>
+        </VBox>
+
+        <Button fx:id="registerBtn" maxWidth="Infinity"
+                styleClass="btn-primary" onAction="#onRegister"/>
+
+        <Label fx:id="backLink" styleClass="label-link"
+               alignment="CENTER" maxWidth="Infinity"
+               onMouseClicked="#onBack"/>
+    </VBox>
+</VBox>

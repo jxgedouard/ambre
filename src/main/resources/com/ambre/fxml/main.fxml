@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ambre.controller.MainController"
+            minWidth="1100" minHeight="720"
+            style="-fx-background-color: #F5EDD3;">
+
+    <!-- HEADER : barre du haut -->
+    <top>
+        <HBox styleClass="header-bar" alignment="CENTER_LEFT" spacing="16">
+            <Label fx:id="appTitleLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2C2218;"/>
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userLabel" styleClass="label-muted"/>
+            <Button fx:id="langBtn" styleClass="btn-secondary" onAction="#onSwitchLang"/>
+            <Button fx:id="logoutBtn" styleClass="btn-secondary" onAction="#onLogout"/>
+        </HBox>
+    </top>
+
+    <!-- SIDEBAR : panneau gauche avec filtres et bouton d'ajout -->
+    <left>
+        <VBox styleClass="sidebar" spacing="8">
+            <Button fx:id="filterAllBtn" maxWidth="Infinity" onAction="#onFilterAll"/>
+            <Button fx:id="filterInProgressBtn" maxWidth="Infinity" onAction="#onFilterInProgress"/>
+            <Button fx:id="filterDoneBtn" maxWidth="Infinity" onAction="#onFilterDone"/>
+            <VBox VBox.vgrow="ALWAYS"/>
+            <Button fx:id="addBtn" maxWidth="Infinity" styleClass="btn-primary" onAction="#onAddTask"/>
+        </VBox>
+    </left>
+
+    <!-- CENTRE : liste des tâches -->
+    <center>
+        <VBox style="-fx-background-color: #F5EDD3;">
+            <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+            <ListView fx:id="taskListView" VBox.vgrow="ALWAYS" styleClass="list-view"/>
+        </VBox>
+    </center>
+</BorderPane>

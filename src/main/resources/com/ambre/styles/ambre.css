@@ -1,0 +1,282 @@
+/* ===== PALETTE AMBRE =====
+   Ces couleurs sont utilisées partout dans l'application.
+   sage:    #D4DDB8  vert sauge
+   cream:   #F5EDD3  crème (fond principal)
+   sand:    #EBD9A8  sable (fond cartes)
+   caramel: #B8813A  caramel (boutons, accents)
+   text:    #2C2218  brun foncé (texte)
+   muted:   #7A6A55  brun moyen (texte secondaire)
+   border:  #D9C9A8  beige (bordures)
+   error:   #C0392B  rouge (erreurs)
+   done:    #8A9E6A  vert olive (tâches terminées)
+*/
+
+/* ===== BASE ===== */
+.root {
+    -fx-background-color: #F5EDD3;
+    -fx-font-family: ".SF NS Text", "Helvetica Neue", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C2218;
+}
+
+/* ===== BOUTONS ===== */
+
+/* Bouton principal (ex : Se connecter, Enregistrer) */
+.btn-primary {
+    -fx-background-color: #B8813A;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 24 10 24;
+    -fx-background-radius: 24;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+.btn-primary:hover {
+    -fx-background-color: #9E6E2E;
+}
+
+/* Bouton secondaire (ex : Annuler, Retour) */
+.btn-secondary {
+    -fx-background-color: #EBD9A8;
+    -fx-text-fill: #2C2218;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 24;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 24;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover {
+    -fx-background-color: #DDD0A0;
+}
+
+/* ===== CHAMPS DE SAISIE ===== */
+.text-field, .password-field, .text-area, .date-picker .text-field {
+    -fx-background-color: white;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C2218;
+}
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #B8813A;
+}
+
+/* ===== LABELS ===== */
+.label-error {
+    -fx-text-fill: #C0392B;
+    -fx-font-size: 12px;
+}
+
+.label-muted {
+    -fx-text-fill: #7A6A55;
+    -fx-font-size: 12px;
+}
+
+.label-title {
+    -fx-text-fill: #2C2218;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.label-link {
+    -fx-text-fill: #B8813A;
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+
+/* ===== HEADER (barre du haut) ===== */
+.header-bar {
+    -fx-background-color: #EDE4C8;
+    -fx-padding: 12 24 12 24;
+}
+
+/* ===== SIDEBAR (panneau gauche) ===== */
+.sidebar {
+    -fx-background-color: #EDE4C8;
+    -fx-padding: 24 16 24 16;
+    -fx-min-width: 200;
+}
+
+/* ===== BOUTONS DE FILTRE ===== */
+.filter-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7A6A55;
+    -fx-font-size: 13px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-alignment: CENTER-LEFT;
+}
+.filter-btn:hover {
+    -fx-background-color: #DDD0A0;
+}
+.filter-btn-active {
+    -fx-background-color: #B8813A;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER-LEFT;
+}
+
+/* ===== LISTE DES TÂCHES ===== */
+.list-view {
+    -fx-background-color: #F5EDD3;
+    -fx-border-width: 0;
+    -fx-padding: 8;
+}
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 4 0 4 0;
+}
+.list-view .list-cell:selected {
+    -fx-background-color: transparent;
+}
+
+/* ===== CARTE DE TÂCHE ===== */
+.task-card {
+    -fx-background-color: #EBD9A8;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 16;
+}
+.task-card-done {
+    -fx-background-color: #EDF2E4;
+    -fx-border-color: #D4DDB8;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 16;
+}
+
+.task-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C2218;
+}
+.task-title-done {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #7A6A55;
+    -fx-strikethrough: true;
+}
+.task-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7A6A55;
+}
+.task-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7A6A55;
+}
+.task-date-overdue {
+    -fx-font-size: 12px;
+    -fx-text-fill: #C0392B;
+}
+
+/* ===== BADGES DE PRIORITÉ ===== */
+.badge-low {
+    -fx-background-color: #D9C9A8;
+    -fx-text-fill: #7A6A55;
+    -fx-font-size: 11px;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 8;
+}
+.badge-medium {
+    -fx-background-color: #EBD9A8;
+    -fx-text-fill: #B8813A;
+    -fx-font-size: 11px;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #B8813A;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+.badge-high {
+    -fx-background-color: #B8813A;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 8;
+}
+
+/* ===== BARRE DE PROGRESSION ===== */
+.progress-bar {
+    -fx-pref-height: 6;
+    -fx-accent: #B8813A;
+}
+.progress-bar .track {
+    -fx-background-color: #D9C9A8;
+    -fx-background-radius: 3;
+}
+.progress-bar .bar {
+    -fx-background-color: #B8813A;
+    -fx-background-radius: 3;
+    -fx-background-insets: 0;
+}
+
+/* ===== CHOICEBOX (liste déroulante) ===== */
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+/* ===== SLIDER ===== */
+.slider .track {
+    -fx-background-color: #D9C9A8;
+    -fx-background-radius: 3;
+}
+.slider .thumb {
+    -fx-background-color: #B8813A;
+}
+
+/* ===== DATE PICKER ===== */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+/* ===== DIALOG (fenêtre de confirmation) ===== */
+.dialog-pane {
+    -fx-background-color: #F5EDD3;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #EDE4C8;
+}
+.dialog-pane .button-bar .button {
+    -fx-background-color: #EBD9A8;
+    -fx-text-fill: #2C2218;
+    -fx-border-color: #D9C9A8;
+    -fx-border-radius: 24;
+    -fx-background-radius: 24;
+    -fx-padding: 8 20 8 20;
+}
+
+/* ===== SCROLLBAR ===== */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #D9C9A8;
+    -fx-background-radius: 4;
+}
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-pref-height: 0;
+}

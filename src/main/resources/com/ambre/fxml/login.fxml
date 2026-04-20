@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.ambre.controller.LoginController"
+      alignment="CENTER" spacing="0"
+      minWidth="440" minHeight="520"
+      style="-fx-background-color: #F5EDD3;">
+
+    <padding><Insets top="60" right="60" bottom="60" left="60"/></padding>
+
+    <Label fx:id="titleLabel" styleClass="label-title" wrapText="true"/>
+
+    <VBox spacing="20">
+        <padding><Insets top="40"/></padding>
+
+        <VBox spacing="6">
+            <Label fx:id="usernameLabel"/>
+            <TextField fx:id="usernameField"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label fx:id="passwordLabel"/>
+            <PasswordField fx:id="passwordField"/>
+        </VBox>
+
+        <Label fx:id="errorLabel" styleClass="label-error" wrapText="true"
+               managed="false" visible="false"/>
+
+        <Button fx:id="loginBtn" maxWidth="Infinity"
+                styleClass="btn-primary" onAction="#onLogin"/>
+
+        <Label fx:id="registerLink" styleClass="label-link"
+               alignment="CENTER" maxWidth="Infinity"
+               onMouseClicked="#onRegister"/>
+    </VBox>
+</VBox>
