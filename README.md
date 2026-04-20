@@ -6,7 +6,7 @@
 
 | Couche | Technologie |
 |--------|-------------|
-| UI | JavaFX 23 |
+| UI | JavaFX 25.0.1 |
 | Langage | Java 25 |
 | Persistance | Gson 2.10.1, JSON (`~/.ambre/`) |
 | Auth | jBCrypt 0.4.1 |
@@ -41,8 +41,8 @@ mvn clean javafx:run
 ## Build distribution (.dmg macOS)
 
 ```bash
-export JAVAFX_HOME=/path/to/javafx-sdk-23
-mvn clean package verify -DskipTests
+export JAVAFX_HOME=/path/to/javafx-sdk-25.0.1
+./package-dmg.sh
 ```
 
 Le `.dmg` se trouve dans `target/dist/Ambre-1.0.0.dmg`.
@@ -60,6 +60,7 @@ Aucune installation de Java requise.
 ```
 ambre/
 ├── pom.xml
+├── package-dmg.sh
 └── src/main/
     ├── java/com/ambre/
     │   ├── Main.java
