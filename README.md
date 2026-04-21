@@ -2,6 +2,8 @@
 
 > Gestionnaire de tâches personnel avec authentification, notifications macOS et support FR/EN.
 
+[![Démo du projet](https://img.youtube.com/vi/c4ug6PaRi_s/0.jpg)](https://youtu.be/c4ug6PaRi_s?is=bw9DH4jbI5BNhD1G)
+
 ## Stack technique
 
 | Couche | Technologie |
